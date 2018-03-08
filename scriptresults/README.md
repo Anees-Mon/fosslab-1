@@ -1,1 +1,1 @@
-just execute the file script.sh.the rest of the files will be downloaded or created
+Fosslab Activities submitted by: Name : Jeswin Cyriac class : cs4b rollno : 27

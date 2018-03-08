@@ -66,7 +66,7 @@ awk '{ print ($1" "$2" "$3":"($4 * $5 + $6 * $7 + $8* $9 + $10 * $11 + $12 * $13
 column -t -s $':' s1sgpa1.txt > s1sgpa.txt
 column -t -s $':' s2sgpa1.txt > s2sgpa.txt
 cut -d ':' -f2 s2sgpa1.txt>s2sgpa3.txt
-paste s1sgpa.txt s2sgpa3.txt |awk '{ print ($1" "$2" "$3"  :"($4 + $5) /2) }'|column -t -s $':'>cgpa.txt
+paste s1sgpa.txt s2sgpa3.txt |awk '{ print ($1" "$2" "$3"  :"($4*23 + $5*24) /47) }'|column -t -s $':'>cgpa.txt
 echo
 echo  *****************CGPA OF CS4B STUDENTS******************
 echo
@@ -77,5 +77,5 @@ rm *.pdf
 rm S*.txt
 rm s1sgpa1.txt
 rm s2sgpa1.txt
-rm s2sgpa3.txt 
+rm s2sgpa3.txt
 rm cs4blist.txt
